@@ -117,7 +117,7 @@ export const DATA = {
       badges: [],
       location: "Cairo, Egypt",
       title: "Full Stack Engineer",
-      logoUrl: "",
+      logoUrl: "https://www.google.com/s2/favicons?domain=wks.agency&sz=128",
       start: "February 2026",
       end: undefined,
       description:
@@ -129,7 +129,7 @@ export const DATA = {
       badges: ["Internship"],
       location: "Cairo, Egypt · Hybrid",
       title: "Full-Stack Laravel Developer",
-      logoUrl: "",
+      logoUrl: "https://www.google.com/s2/favicons?domain=wks.agency&sz=128",
       start: "July 2025",
       end: "November 2025",
       description:
@@ -142,7 +142,7 @@ export const DATA = {
       school: "Benha University",
       href: "https://beng.bu.edu.eg/",
       degree: "B.Sc. in Civil Engineering",
-      logoUrl: "",
+      logoUrl: "https://www.google.com/s2/favicons?domain=bu.edu.eg&sz=128",
       start: "2019",
       end: "2025",
     },

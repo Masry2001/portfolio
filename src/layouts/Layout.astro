@@ -41,15 +41,19 @@ const { baseFontSize } = CONFIG.typography;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
 
-    <!-- FOUC prevention: dark by default, unless the visitor chose light -->
+    <!-- FOUC prevention: apply stored theme before first paint -->
     <script is:inline>
       (function () {
         try {
           var theme = localStorage.getItem("theme");
-          if (theme === "light") {
-            document.documentElement.classList.remove("dark");
-          } else {
+          if (
+            theme === "dark" ||
+            (!theme &&
+              window.matchMedia("(prefers-color-scheme: dark)").matches)
+          ) {
             document.documentElement.classList.add("dark");
+          } else {
+            document.documentElement.classList.remove("dark");
           }
         } catch (_) {}
       })();
