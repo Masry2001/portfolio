@@ -7,7 +7,7 @@ export default function ContactSection() {
   const whatsapp = DATA.contact.social.WhatsApp.url;
 
   return (
-    <div className="border rounded-xl p-10 relative">
+    <div className="border rounded-xl p-6 sm:p-10 relative overflow-hidden">
       <div className="absolute -top-4 border bg-primary z-10 rounded-xl px-4 py-1 left-1/2 -translate-x-1/2">
         <span className="text-background text-sm font-medium">
           {DATA.sections.contact.label}
@@ -31,22 +31,25 @@ export default function ContactSection() {
         <p className="mx-auto max-w-lg text-muted-foreground text-balance">
           {DATA.sections.contact.text}
         </p>
-        <div className="mt-2 flex flex-col sm:flex-row items-center gap-3">
+        <div className="mt-2 flex w-full flex-col sm:w-auto sm:flex-row items-stretch sm:items-center gap-3">
           <a
             href={whatsapp}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 rounded-md bg-primary text-primary-foreground text-sm font-medium h-10 px-5 transition-opacity hover:opacity-90"
           >
-            <Icons.whatsapp className="size-4" />
+            <Icons.whatsapp className="size-4 flex-none" />
             WhatsApp
           </a>
           <a
             href={`mailto:${email}`}
             className="inline-flex items-center justify-center gap-2 rounded-md border border-input bg-background text-sm font-medium h-10 px-5 transition-colors hover:bg-accent hover:text-accent-foreground"
           >
-            <Icons.email className="size-4" />
-            {email}
+            <Icons.email className="size-4 flex-none" />
+            <span className="truncate">
+              <span className="sm:hidden">Email me</span>
+              <span className="hidden sm:inline">{email}</span>
+            </span>
           </a>
         </div>
       </div>

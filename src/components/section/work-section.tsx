@@ -3,22 +3,23 @@ import { useState } from "react";
 import { DATA } from "@/data/resume";
 import { ArrowUpRight } from "lucide-react";
 
-function LogoImage({ src, alt }: { src: string; alt: string }) {
+function CompanyBadge({ company, src }: { company: string; src?: string }) {
   const [imageError, setImageError] = useState(false);
-
-  if (!src || imageError) {
-    return (
-      <div className="size-8 md:size-10 p-1 border rounded-full shadow ring-2 ring-border bg-muted flex-none" />
-    );
-  }
+  const showImage = Boolean(src) && !imageError;
 
   return (
-    <img
-      src={src}
-      alt={alt}
-      className="size-8 md:size-10 p-1 border rounded-full shadow ring-2 ring-border overflow-hidden object-contain flex-none"
-      onError={() => setImageError(true)}
-    />
+    <div className="size-9 md:size-11 flex-none flex items-center justify-center overflow-hidden rounded-full border ring-2 ring-border bg-muted text-sm font-semibold text-muted-foreground">
+      {showImage ? (
+        <img
+          src={src}
+          alt={company}
+          className="size-full object-contain p-1.5"
+          onError={() => setImageError(true)}
+        />
+      ) : (
+        <span aria-hidden>{company.trim().charAt(0).toUpperCase()}</span>
+      )}
+    </div>
   );
 }
 
@@ -30,11 +31,11 @@ export default function WorkSection() {
           key={`${work.company}-${work.start}`}
           className="flex items-start gap-x-3"
         >
-          <LogoImage src={work.logoUrl} alt={work.company} />
+          <CompanyBadge company={work.company} src={work.logoUrl} />
           <div className="flex-1 min-w-0 flex flex-col gap-1.5">
-            <div className="flex items-start justify-between gap-2">
+            <div className="flex flex-col gap-0.5 sm:flex-row sm:items-start sm:justify-between sm:gap-2">
               <div className="flex flex-col gap-0.5 min-w-0">
-                <div className="font-semibold leading-none flex items-center gap-2 flex-wrap">
+                <div className="font-semibold leading-snug flex items-center gap-2 flex-wrap">
                   {work.href ? (
                     <a
                       href={work.href}
@@ -64,8 +65,8 @@ export default function WorkSection() {
                   {work.title}
                 </div>
               </div>
-              <div className="text-xs tabular-nums text-muted-foreground text-right flex-none">
-                {work.start} - {work.end ?? DATA.sections.work.presentLabel}
+              <div className="text-xs tabular-nums text-muted-foreground sm:text-right flex-none">
+                {work.start} – {work.end ?? DATA.sections.work.presentLabel}
               </div>
             </div>
             <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
