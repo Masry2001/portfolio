@@ -176,7 +176,7 @@ export default function HomePage() {
     <main className="min-h-dvh flex flex-col gap-14 relative">
       <section id="hero">
         <div className="mx-auto w-full max-w-2xl space-y-8">
-          <div className="gap-2 gap-y-6 flex flex-col md:flex-row justify-between">
+          <div className="gap-x-6 gap-y-6 flex flex-col md:flex-row justify-between">
             <div className="gap-2 flex flex-col order-2">
               <BlurFadeText
                 delay={BLUR_FADE_DELAY}
