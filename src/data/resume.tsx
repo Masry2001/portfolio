@@ -260,23 +260,24 @@ export const DATA = {
       video: "",
     },
     {
-      title: "Inventory Management System",
-      href: "https://github.com/Masry2001/InventorySystem",
+      title: "Driving & Vehicle License Department (DVLD v2)",
+      href: "https://github.com/Masry2001/DVLDv2Project",
       dates: "2025",
       active: false,
       description:
-        "A Windows desktop application for managing products, customers, suppliers, employees, and users. Built with C# and the .NET Framework on a 3-tier architecture, with a normalized SQL Server database accessed through ADO.NET. Includes authentication, CRUD across all entities, and report generation.",
+        "A Windows Forms desktop system that models a driving-license authority: managing drivers, issuing and renewing licenses across vehicle classes (car, motorbike, heavy vehicles), and running the theory and practical tests a driver must pass before a license is granted. Built on a 3-layer architecture — presentation, business logic, and data access — with C# and ADO.NET over SQL Server.",
       technologies: [
         "C#",
+        "Windows Forms",
         ".NET Framework",
-        "SQL Server",
         "ADO.NET",
-        "3-Tier Architecture",
+        "SQL Server",
+        "3-Layer Architecture",
       ],
       links: [
         {
           type: "Source",
-          href: "https://github.com/Masry2001/InventorySystem",
+          href: "https://github.com/Masry2001/DVLDv2Project",
           icon: <Icons.github className="size-3" />,
         },
       ],
