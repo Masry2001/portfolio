@@ -15,7 +15,7 @@ import { Postgresql } from "@/components/ui/svgs/postgresql";
 import { Docker } from "@/components/ui/svgs/docker";
 
 export const DATA = {
-  name: "Mohamed Hany Musa",
+  name: "Mohamed Mousa",
   initials: "MM",
   url: "https://mohamedmousa.tech",
   location: "Cairo, Egypt",
@@ -23,7 +23,7 @@ export const DATA = {
   description:
     "Full-stack developer specializing in PHP, Laravel & Filament. I build production-ready, AI-integrated web platforms.",
   summary:
-    "I'm a full-stack developer based in Cairo, focused on the Laravel ecosystem. I'm currently a Full Stack Engineer at [WKS LTD](/#work), building and maintaining the company's internal platform with Laravel and Vue.\n\nEarlier at WKS I designed and shipped an [AI-powered job board platform](/#projects) on Laravel 12 — résumé screening and candidate matching with Google Gemini, role-based access control, queued jobs, and a Dockerized production deployment. I came to the web from a Civil Engineering degree at [Benha University](/#education) and a couple of years building C++ and C# desktop systems on my own.\n\nI'm [Laravel certified](/#certifications) and completed McKinsey's Forward Program.",
+    "I'm a full-stack developer based in Cairo, working in the Laravel ecosystem. I joined [WKS LTD](https://wks.agency/) as a Laravel intern (Jul–Nov 2025), where I designed and built an [AI-powered job board platform](/#projects) on Laravel 12 — résumé screening and candidate matching with Google Gemini, role-based access control, queued jobs, and a Dockerized production deployment.\n\nSince February 2026 I've continued at [WKS LTD](https://wks.agency/), doing manual testing of the internal platform, small tasks around the database and the design, and writing documentation, along with proposing design improvements. Alongside that role I built [HanyMart](/#projects), a production e-commerce platform with a Laravel REST API and a separate TypeScript front end.\n\nI came to the web from a Civil Engineering degree at [Benha University](/#education) and a couple of years building C++ and C# desktop systems on my own. I'm [Laravel certified](/#certifications) and completed McKinsey's Forward Program.",
   avatarUrl: "/portfolio.png",
   ogImage: "/android-chrome-512x512.png",
 
@@ -116,23 +116,23 @@ export const DATA = {
   work: [
     {
       company: "WKS LTD",
-      href: "https://www.wksagency.com/",
+      href: "https://wks.agency/",
       badges: [],
       location: "Cairo, Egypt",
       title: "Full Stack Engineer",
-      logoUrl: "https://www.google.com/s2/favicons?domain=wksagency.com&sz=128",
+      logoUrl: "https://www.google.com/s2/favicons?domain=wks.agency&sz=128",
       start: "February 2026",
       end: undefined,
       description:
-        "Building and maintaining the company's internal platform end to end — a Laravel API with a Vue front end, including the artist portal. Responsible for feature delivery, code review, and keeping the platform reliable in production.",
+        "Manual testing of the company's internal platform and reporting issues, alongside small tasks around the database and the UI design and writing documentation. Reviewed the platform's design and proposed improvements.",
     },
     {
       company: "WKS LTD",
-      href: "https://www.wksagency.com/",
+      href: "https://wks.agency/",
       badges: ["Internship"],
       location: "Cairo, Egypt · Hybrid",
       title: "Full-Stack Laravel Developer",
-      logoUrl: "https://www.google.com/s2/favicons?domain=wksagency.com&sz=128",
+      logoUrl: "https://www.google.com/s2/favicons?domain=wks.agency&sz=128",
       start: "July 2025",
       end: "November 2025",
       description:
