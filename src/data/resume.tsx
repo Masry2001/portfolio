@@ -1,5 +1,5 @@
 import { Icons } from "@/components/icons";
-import { House } from "lucide-react";
+import { Database, House } from "lucide-react";
 
 import { Cplusplus } from "@/components/ui/svgs/cplusplus";
 import { Csharp } from "@/components/ui/svgs/csharp";
@@ -8,7 +8,6 @@ import { Typescript } from "@/components/ui/svgs/typescript";
 import { Laravel } from "@/components/ui/svgs/laravel";
 import { ReactLight } from "@/components/ui/svgs/reactLight";
 import { Tailwind } from "@/components/ui/svgs/tailwind";
-import { Sqlserver } from "@/components/ui/svgs/sqlserver";
 import { Mysql } from "@/components/ui/svgs/mysql";
 import { Postgresql } from "@/components/ui/svgs/postgresql";
 import { Docker } from "@/components/ui/svgs/docker";
@@ -66,7 +65,7 @@ export const DATA = {
     { name: "Laravel", icon: Laravel },
     { name: "React", icon: ReactLight },
     { name: "Tailwind CSS", icon: Tailwind },
-    { name: "SQL Server", icon: Sqlserver },
+    { name: "SQL Server", icon: Database },
     { name: "MySQL", icon: Mysql },
     { name: "PostgreSQL", icon: Postgresql },
     { name: "Docker", icon: Docker },
