@@ -1,9 +1,9 @@
 {
-  "name": "starfolio",
+  "name": "portfolio",
   "type": "module",
-  "description": "Starfolio - Create a personal or professional portfolio site just from a single config file. Built with Astro.",
-  "author": "websiterating",
-  "version": "0.0.1",
+  "description": "Personal portfolio site for Mohamed Hany Musa - mohamedmousa.tech",
+  "author": "Mohamed Hany Musa",
+  "version": "1.0.0",
   "engines": {
     "node": ">=22.12.0"
   },
@@ -11,12 +11,9 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro",
-    "generate-types": "wrangler types"
+    "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^13.3.0",
-    "@astrojs/mdx": "^5.0.4",
     "@astrojs/react": "^5.0.4",
     "@astrojs/sitemap": "^3.7.2",
     "@fontsource-variable/geist-mono": "^5.2.7",
@@ -40,13 +37,9 @@
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
     "react-markdown": "^10.1.0",
-    "rehype-pretty-code": "^0.14.3",
-    "remark-gfm": "^4.0.1",
-    "shiki": "^4.0.2",
     "tailwind-merge": "^3.5.0",
     "tailwindcss": "^4.2.4",
-    "tw-animate-css": "^1.4.0",
-    "wrangler": "^4.87.0"
+    "tw-animate-css": "^1.4.0"
   },
   "overrides": {
     "vite": "^7"

@@ -1,114 +1,112 @@
 import { Icons } from "@/components/icons";
-import { House, Library } from "lucide-react";
-import { ReactLight } from "@/components/ui/svgs/reactLight";
-import { NextjsIconDark } from "@/components/ui/svgs/nextjsIconDark";
+import { House } from "lucide-react";
+
+import { Cplusplus } from "@/components/ui/svgs/cplusplus";
+import { Csharp } from "@/components/ui/svgs/csharp";
+import { Php } from "@/components/ui/svgs/php";
+import { Javascript } from "@/components/ui/svgs/javascript";
 import { Typescript } from "@/components/ui/svgs/typescript";
-import { Nodejs } from "@/components/ui/svgs/nodejs";
-import { Python } from "@/components/ui/svgs/python";
-import { Golang } from "@/components/ui/svgs/golang";
+import { Laravel } from "@/components/ui/svgs/laravel";
+import { Filament } from "@/components/ui/svgs/filament";
+import { Vue } from "@/components/ui/svgs/vue";
+import { Tailwind } from "@/components/ui/svgs/tailwind";
+import { Mysql } from "@/components/ui/svgs/mysql";
 import { Postgresql } from "@/components/ui/svgs/postgresql";
 import { Docker } from "@/components/ui/svgs/docker";
-import { Kubernetes } from "@/components/ui/svgs/kubernetes";
-import { Astro } from "@/components/ui/svgs/astro";
 
 export const DATA = {
-  name: "Alex Mercer - Software Engineer",
-  initials: "AM",
-  url: "https://alexmercer.dev",
-  location: "Austin, TX",
-  locationLink: "https://www.google.com/maps/place/austin+tx",
+  name: "Mohamed Hany Musa",
+  initials: "MM",
+  url: "https://mohamedmousa.tech",
+  location: "Cairo, Egypt",
+  locationLink: "https://www.google.com/maps/place/Cairo",
   description:
-    "Full-stack engineer turned indie founder. I love building developer tools, fast UIs, and products people actually use.",
+    "Full-stack developer specializing in PHP, Laravel & Filament. I build production-ready, AI-integrated web platforms.",
   summary:
-    "In early 2023, I left a senior engineering role to go all-in on building my own SaaS products. Before that, [I completed a double degree in computer science and business](/#education), [interned at companies like Stripe and Cloudflare](/#work), and [competed in 18+ hackathons](/#hackathons). I also spent a summer in San Francisco as part of a founder residency focused on shipping fast and finding early customers.",
-  avatarUrl: "/picofme.png",
-  ogImage: "/og_image.png",
+    "I'm a full-stack developer based in Cairo, focused on the Laravel ecosystem. I'm currently a Full Stack Engineer at [WKS LTD](/#work), building and maintaining the company's internal platform with Laravel and Vue.\n\nEarlier at WKS I designed and shipped an [AI-powered job board platform](/#projects) on Laravel 12 — résumé screening and candidate matching with Google Gemini, role-based access control, queued jobs, and a Dockerized production deployment. I came to the web from a Civil Engineering degree at [Benha University](/#education) and a couple of years building C++ and C# desktop systems on my own.\n\nI'm [Laravel certified](/#certifications) and completed McKinsey's Forward Program.",
+  avatarUrl: "/portfolio.png",
+  ogImage: "/android-chrome-512x512.png",
+
   sections: {
     about: { order: 1, enabled: true, heading: "About" },
-    work: { order: 2, enabled: true, heading: "Work Experience", presentLabel: "Present" },
+    work: {
+      order: 2,
+      enabled: true,
+      heading: "Work Experience",
+      presentLabel: "Present",
+    },
     education: { order: 3, enabled: true, heading: "Education" },
     skills: { order: 4, enabled: true, heading: "Skills" },
+    certifications: {
+      order: 5,
+      enabled: true,
+      heading: "Certifications",
+    },
     projects: {
-      order: 5, enabled: true,
-      label: "My Projects",
-      heading: "Check out my latest work",
-      text: "I've worked on a variety of projects, from simple websites to complex web applications. Here are a few of my favorites.",
-    },
-    hackathons: {
-      order: 7, enabled: true,
-      label: "Hackathons",
-      heading: "I like building things",
-      text: "During my time in university, I attended {count}+ hackathons. People from around the country would come together and build incredible things in 2-3 days. It was eye-opening to see the endless possibilities brought to life by a group of motivated and passionate individuals.",
-    },
-    photos: {
-      order: 6, enabled: true,
-      heading: "My Recent Travels",
+      order: 6,
+      enabled: true,
+      label: "Projects",
+      heading: "Things I've built",
+      text: "A selection of work across web and desktop — from AI-powered Laravel platforms to C# and C++ systems.",
     },
     contact: {
-      order: 8, enabled: true,
+      order: 7,
+      enabled: true,
       label: "Contact",
       heading: "Get in Touch",
-      text: "Want to chat? Just shoot me a dm with a direct question on twitter and I'll respond whenever I can. I will ignore all soliciting.",
+      text: "The fastest way to reach me is on WhatsApp or by email. I'm open to full-stack and backend roles.",
     },
   },
-  photos: [
-    { src: "/photos/photo1.jpg", alt: "Photo 1" },
-    { src: "/photos/photo2.jpg", alt: "Photo 2" },
-    { src: "/photos/photo3.jpg", alt: "Photo 3" },
-    { src: "/photos/photo4.jpg", alt: "Photo 4" },
-    { src: "/photos/photo5.jpg", alt: "Photo 5" },
-    { src: "/photos/photo6.jpg", alt: "Photo 6" },
-    { src: "/photos/photo7.jpg", alt: "Photo 7" },
-    { src: "/photos/photo8.jpg", alt: "Photo 8" },
-    { src: "/photos/photo9.jpg", alt: "Photo 9" },
-  ],
+
+  // Ordered low-level → high-level.
   skills: [
-    { name: "Astro", icon: Astro },
-    { name: "React", icon: ReactLight },
-    { name: "Next.js", icon: NextjsIconDark },
-    { name: "Typescript", icon: Typescript },
-    { name: "Node.js", icon: Nodejs },
-    { name: "Python", icon: Python },
-    { name: "Go", icon: Golang },
-    { name: "Postgres", icon: Postgresql },
+    { name: "C++", icon: Cplusplus },
+    { name: "C#", icon: Csharp },
+    { name: "PHP", icon: Php },
+    { name: "JavaScript", icon: Javascript },
+    { name: "TypeScript", icon: Typescript },
+    { name: "Laravel", icon: Laravel },
+    { name: "Filament", icon: Filament },
+    { name: "Vue", icon: Vue },
+    { name: "Tailwind CSS", icon: Tailwind },
+    { name: "MySQL", icon: Mysql },
+    { name: "PostgreSQL", icon: Postgresql },
     { name: "Docker", icon: Docker },
-    { name: "Kubernetes", icon: Kubernetes },
   ],
-  navbar: [
-    { href: "/", icon: House, label: "Home" },
-    { href: "/blog", icon: Library, label: "Blog" },
-  ],
+
+  navbar: [{ href: "/", icon: House, label: "Home" }],
+
   contact: {
-    email: "alex@alexmercer.dev",
-    tel: "+1 512 000 0000",
+    email: "mohamedhanymusa@gmail.com",
+    tel: "+201125226780",
     social: {
+      WhatsApp: {
+        name: "WhatsApp",
+        url: "https://wa.me/201125226780",
+        icon: Icons.whatsapp,
+        navbar: true,
+      },
       GitHub: {
         name: "GitHub",
-        url: "https://github.com",
+        url: "https://github.com/Masry2001",
         icon: Icons.github,
         navbar: true,
       },
       LinkedIn: {
         name: "LinkedIn",
-        url: "https://linkedin.com",
+        url: "https://www.linkedin.com/in/mohamedhanymusa/",
         icon: Icons.linkedin,
         navbar: true,
       },
       X: {
         name: "X",
-        url: "https://x.com",
+        url: "https://x.com/MohamedMos16571",
         icon: Icons.x,
-        navbar: true,
-      },
-      Youtube: {
-        name: "Youtube",
-        url: "https://youtube.com",
-        icon: Icons.youtube,
         navbar: true,
       },
       email: {
         name: "Send Email",
-        url: "mailto:alex@alexmercer.dev",
+        url: "mailto:mohamedhanymusa@gmail.com",
         icon: Icons.email,
         navbar: false,
       },
@@ -117,344 +115,179 @@ export const DATA = {
 
   work: [
     {
-      company: "Meridian Labs",
-      href: "https://meridian.so",
-      badges: ["Founder"],
-      location: "Austin, TX",
-      title: "Co-founder & Engineer",
-      logoUrl: "https://avatar.vercel.sh/meridian-labs?size=40",
-      start: "January 2023",
+      company: "WKS LTD",
+      href: "https://www.wksagency.com/",
+      badges: [],
+      location: "Cairo, Egypt",
+      title: "Full Stack Engineer",
+      logoUrl: "https://www.google.com/s2/favicons?domain=wksagency.com&sz=128",
+      start: "February 2026",
       end: undefined,
       description:
-        "Building a suite of developer productivity tools focused on local-first architecture and offline sync. Grew to 1,200 paying customers within the first year. Responsible for the full stack - product, engineering, and growth.",
+        "Building and maintaining the company's internal platform end to end — a Laravel API with a Vue front end, including the artist portal. Responsible for feature delivery, code review, and keeping the platform reliable in production.",
     },
     {
-      company: "Stripe",
-      href: "https://stripe.com",
-      badges: [],
-      location: "San Francisco, CA",
-      title: "Software Engineer Intern",
-      logoUrl: "https://www.google.com/s2/favicons?domain=stripe.com&sz=128",
-      start: "May 2022",
-      end: "August 2022",
+      company: "WKS LTD",
+      href: "https://www.wksagency.com/",
+      badges: ["Internship"],
+      location: "Cairo, Egypt · Hybrid",
+      title: "Full-Stack Laravel Developer",
+      logoUrl: "https://www.google.com/s2/favicons?domain=wksagency.com&sz=128",
+      start: "July 2025",
+      end: "November 2025",
       description:
-        "Worked on the Payments Infrastructure team. Built an internal load-testing framework in Go that reduced regression testing time by 60%. Contributed to the migration of legacy billing logic to a new event-driven architecture using Kafka.",
-    },
-    {
-      company: "Cloudflare",
-      href: "https://cloudflare.com",
-      badges: [],
-      location: "Remote",
-      title: "Software Engineer Intern",
-      logoUrl: "https://www.google.com/s2/favicons?domain=cloudflare.com&sz=128",
-      start: "September 2021",
-      end: "December 2021",
-      description:
-        "Joined the Workers team during a co-op term. Implemented a new dashboard UI for monitoring Worker invocation metrics using React and D3. Added support for custom error boundaries in the Workers runtime sandbox.",
-    },
-    {
-      company: "Datadog",
-      href: "https://datadoghq.com",
-      badges: [],
-      location: "New York, NY",
-      title: "Software Engineer Intern",
-      logoUrl: "https://www.google.com/s2/favicons?domain=datadoghq.com&sz=128",
-      start: "January 2021",
-      end: "April 2021",
-      description:
-        "Built new alert correlation features in the Incidents product using Python and React. Improved p99 query latency on the metrics explorer by 40% through query plan optimizations in PostgreSQL.",
-    },
-    {
-      company: "Benchling",
-      href: "https://benchling.com",
-      badges: [],
-      location: "San Francisco, CA",
-      title: "Software Engineer Intern",
-      logoUrl: "https://www.google.com/s2/favicons?domain=benchling.com&sz=128",
-      start: "May 2020",
-      end: "August 2020",
-      description:
-        "Worked on the scientific data platform team. Implemented a bulk import pipeline for lab instrument data using TypeScript and AWS Lambda, reducing manual data entry time for research teams by over 80%.",
-    },
-    {
-      company: "Relay Labs",
-      href: "https://relay.app",
-      badges: [],
-      location: "Vancouver, BC",
-      title: "Software Engineer Intern",
-      logoUrl: "https://www.google.com/s2/favicons?domain=relay.app&sz=128",
-      start: "September 2019",
-      end: "December 2019",
-      description:
-        "Early-stage startup building workflow automation tools. Shipped core integrations with Slack, Notion, and GitHub. Designed the initial webhook delivery system in Node.js that handled over 500k events per day at peak.",
+        "Designed and built an AI-powered job board platform with Laravel 12, MySQL, Tailwind, and Docker. Integrated Google Gemini to screen résumés and match candidates against job requirements, implemented role-based access control and ownership policies, used Supabase for cloud storage, moved long-running work into queued jobs, and owned the containerized production deployment.",
     },
   ],
+
   education: [
     {
-      school: "Founder Fellowship SF",
-      href: "https://foundersfellowship.io",
-      degree: "Cohort 4 - Founder in Residence",
-      logoUrl: "https://avatar.vercel.sh/founder-fellowship?size=40",
-      start: "2023",
-      end: "2023",
-    },
-    {
-      school: "University of British Columbia",
-      href: "https://ubc.ca",
-      degree: "Bachelor of Science, Computer Science",
-      logoUrl: "https://www.google.com/s2/favicons?domain=ubc.ca&sz=128",
-      start: "2018",
-      end: "2023",
-    },
-    {
-      school: "Simon Fraser University",
-      href: "https://sfu.ca",
-      degree: "Bachelor of Business Administration",
-      logoUrl: "https://www.google.com/s2/favicons?domain=sfu.ca&sz=128",
-      start: "2018",
-      end: "2023",
-    },
-    {
-      school: "International Baccalaureate",
-      href: "https://ibo.org",
-      degree: "IB Diploma",
-      logoUrl: "https://www.google.com/s2/favicons?domain=ibo.org&sz=128",
-      start: "2014",
-      end: "2018",
+      school: "Benha University",
+      href: "https://www.bu.edu.eg/",
+      degree: "B.Sc. in Civil Engineering",
+      logoUrl: "https://www.google.com/s2/favicons?domain=bu.edu.eg&sz=128",
+      start: "2019",
+      end: "2025",
     },
   ],
+
+  certifications: [
+    {
+      name: "Laravel",
+      issuer: "Udemy",
+      date: "2025",
+      href: "/certificates/laravel-12-udemy.pdf",
+    },
+    {
+      name: "Forward Program",
+      issuer: "McKinsey & Company",
+      date: "2023",
+      href: "/certificates/mckinsey-forward-program.pdf",
+    },
+    {
+      name: "Introduction to RESTful APIs",
+      issuer: "Programming Advices",
+      date: "2025",
+      href: "/certificates/restful-api.pdf",
+    },
+    {
+      name: "OOP Concepts & Applications",
+      issuer: "Programming Advices",
+      date: "2024",
+      href: "/certificates/oop-concepts.pdf",
+    },
+    {
+      name: "Data Structures & Algorithms",
+      issuer: "Programming Advices",
+      date: "2024",
+      href: "/certificates/data-structures.pdf",
+    },
+    {
+      name: "Databases — SQL & T-SQL",
+      issuer: "Programming Advices",
+      date: "2024",
+      href: "/certificates/databases-sql.pdf",
+    },
+  ],
+
   projects: [
     {
-      title: "Stackwise",
-      href: "https://stackwise.dev",
-      dates: "March 2024 - Present",
+      title: "AI Job Board Platform",
+      href: "https://github.com/Masry2001/jobApp",
+      dates: "2025",
       active: true,
       description:
-        "Built an AI-powered code review tool that integrates with GitHub PRs and provides context-aware feedback based on your team's codebase conventions. Used by 300+ engineering teams.",
+        "A full hiring platform split into two apps — a job portal for seekers and a back office for companies and admins — built on Laravel 12 with a shared package between them. Google Gemini scores each résumé against the job description and returns structured feedback for both sides. Includes role-based access control, ownership policies, queued background jobs for the AI analysis, Supabase storage, and a Dockerized production deployment.",
       technologies: [
-        "Next.js",
-        "TypeScript",
-        "PostgreSQL",
-        "Prisma",
-        "TailwindCSS",
-        "Stripe",
-        "Shadcn UI",
-        "OpenAI API",
+        "Laravel 12",
+        "PHP",
+        "Blade",
+        "Alpine.js",
+        "Tailwind CSS",
+        "MySQL",
+        "Docker",
+        "Google Gemini API",
+        "Supabase",
       ],
       links: [
         {
-          type: "Website",
-          href: "https://stackwise.dev",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
-      image: "/example-website.webp",
-      video: "",
-    },
-    {
-      title: "Logport",
-      href: "https://logport.io",
-      dates: "October 2023 - February 2024",
-      active: true,
-      description:
-        "Open-source structured logging dashboard for Node.js and Python services. Ingest logs via a lightweight SDK, query them with a SQL-like syntax, and set up alerts in minutes.",
-      technologies: [
-        "Next.js",
-        "TypeScript",
-        "ClickHouse",
-        "TailwindCSS",
-        "Shadcn UI",
-        "Cloudflare Workers",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://logport.io",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "Source",
-          href: "https://github.com/alexmercer-dev/logport",
+          type: "Job Portal",
+          href: "https://github.com/Masry2001/jobApp",
           icon: <Icons.github className="size-3" />,
+        },
+        {
+          type: "Back Office",
+          href: "https://github.com/Masry2001/jobBackoffice",
+          icon: <Icons.github className="size-3" />,
+        },
+        {
+          type: "Design docs",
+          href: "https://github.com/Masry2001/jobBoardDesign",
+          icon: <Icons.globe className="size-3" />,
         },
       ],
       image: "",
-      video: "https://cdn.magicui.design/bento-grid.mp4",
-    },
-    {
-      title: "Formbase",
-      href: "https://formbase.dev",
-      dates: "June 2023 - September 2023",
-      active: true,
-      description:
-        "A headless form backend that handles submissions, spam filtering, file uploads, and email notifications - no server required. Drop in one script tag and you're done.",
-      technologies: [
-        "Astro",
-        "TypeScript",
-        "Cloudflare Workers",
-        "TailwindCSS",
-        "Stripe",
-        "Resend",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://formbase.dev",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "Source",
-          href: "https://github.com/alexmercer-dev/formbase",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "/example-website.png",
       video: "",
     },
     {
-      title: "Patchwork",
-      href: "https://patchwork.run",
-      dates: "February 2023 - May 2023",
+      title: "HanyMart — E-Commerce Platform",
+      href: "https://hanymart.com/",
+      dates: "2026",
+      active: true,
+      description:
+        "A production e-commerce platform with a Laravel REST API back end and a separate TypeScript front end. Covers the product catalog, cart and checkout, orders, and an admin dashboard for managing inventory. Source is private; the live store is public.",
+      technologies: ["Laravel", "PHP", "REST API", "TypeScript", "MySQL"],
+      links: [
+        {
+          type: "Website",
+          href: "https://hanymart.com/",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "",
+    },
+    {
+      title: "Inventory Management System",
+      href: "https://github.com/Masry2001/InventorySystem",
+      dates: "2025",
       active: false,
       description:
-        "A visual diff tool for design tokens and Tailwind config changes. Connect it to your repo and get a live preview of how a config change affects every component in your design system.",
+        "A Windows desktop application for managing products, customers, suppliers, employees, and users. Built with C# and the .NET Framework on a 3-tier architecture, with a normalized SQL Server database accessed through ADO.NET. Includes authentication, CRUD across all entities, and report generation.",
       technologies: [
-        "Next.js",
-        "TypeScript",
-        "TailwindCSS",
-        "Shadcn UI",
-        "Vercel",
+        "C#",
+        ".NET Framework",
+        "SQL Server",
+        "ADO.NET",
+        "3-Tier Architecture",
       ],
       links: [
         {
-          type: "Website",
-          href: "https://patchwork.run",
-          icon: <Icons.globe className="size-3" />,
+          type: "Source",
+          href: "https://github.com/Masry2001/InventorySystem",
+          icon: <Icons.github className="size-3" />,
         },
       ],
       image: "",
-      video: "https://cdn.llm.report/openai-demo.mp4",
-    },
-  ],
-  hackathons: [
-    {
-      title: "PNW Hacks 2022",
-      dates: "October 14th - 16th, 2022",
-      location: "Seattle, Washington",
-      description: "Built a real-time collaborative code review tool using WebSockets and Monaco Editor. Won best developer tool.",
-      image: "https://avatar.vercel.sh/pnw-hacks?size=40",
-      win: "Best Developer Tool",
-      links: [],
+      video: "",
     },
     {
-      title: "nwHacks 2022",
-      dates: "January 15th - 16th, 2022",
-      location: "Vancouver, BC",
-      description: "Created an accessibility-first browser extension that rewrites complex legal documents into plain English using GPT-3.",
-      image: "https://avatar.vercel.sh/nwhacks-2022?size=40",
-      mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",
-      links: [],
-    },
-    {
-      title: "HackTheNorth 2021",
-      dates: "September 17th - 19th, 2021",
-      location: "Waterloo, Ontario (Remote)",
-      description: "Built a distributed key-value store in Go with a Raft consensus implementation from scratch. Finalist in the systems track.",
-      image: "https://avatar.vercel.sh/hackthenorth-2021?size=40",
+      title: "Bank Management System",
+      href: "https://github.com/Masry2001/Bank_Project",
+      dates: "2024",
+      active: false,
+      description:
+        "A console banking system in modern C++, built to practice object-oriented design. Handles account creation, deposits, withdrawals, balance inquiries, and user management, with a login system that uses bitwise flags for permissions. Applies encapsulation, inheritance, and polymorphism throughout.",
+      technologies: ["C++", "OOP", "File I/O"],
       links: [
         {
-          title: "Source",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/alexmercer-dev/raftdb",
+          type: "Source",
+          href: "https://github.com/Masry2001/Bank_Project",
+          icon: <Icons.github className="size-3" />,
         },
       ],
-    },
-    {
-      title: "DubHacks 2021",
-      dates: "October 9th - 10th, 2021",
-      location: "Seattle, Washington",
-      description: "Developed a carbon footprint tracker that integrates with Google Maps to suggest lower-emission commute alternatives.",
-      image: "https://avatar.vercel.sh/dubhacks-2021?size=40",
-      win: "Best Sustainability Hack",
-      links: [],
-    },
-    {
-      title: "StormHacks 2021",
-      dates: "April 24th - 25th, 2021",
-      location: "Burnaby, BC (Remote)",
-      description: "Built a multiplayer browser game where players collaboratively debug a shared codebase before a timer runs out.",
-      image: "https://avatar.vercel.sh/stormhacks-2021?size=40",
-      links: [
-        {
-          title: "Devpost",
-          icon: <Icons.globe className="h-4 w-4" />,
-          href: "https://devpost.com/software/bugout",
-        },
-      ],
-    },
-    {
-      title: "HackCamp 2020",
-      dates: "November 14th - 15th, 2020",
-      location: "Vancouver, BC (Remote)",
-      description: "Created a CLI tool that automatically generates unit test scaffolding from TypeScript function signatures using static analysis.",
-      image: "https://avatar.vercel.sh/hackcamp-2020?size=40",
-      win: "1st Place Overall",
-      links: [
-        {
-          title: "Source",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/alexmercer-dev/testgen",
-        },
-      ],
-    },
-    {
-      title: "cmd-f 2020",
-      dates: "March 7th - 8th, 2020",
-      location: "Vancouver, BC",
-      description: "Built a mobile-first job board specifically for junior developers, aggregating listings from GitHub Jobs, HN Who's Hiring, and LinkedIn.",
-      image: "https://avatar.vercel.sh/cmd-f-2020?size=40",
-      links: [],
-    },
-    {
-      title: "nwHacks 2020",
-      dates: "January 11th - 12th, 2020",
-      location: "Vancouver, BC",
-      description: "Developed a peer-to-peer study session platform with live video, shared whiteboards, and Pomodoro timers.",
-      image: "https://avatar.vercel.sh/nwhacks-2020?size=40",
-      mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",
-      links: [],
-    },
-    {
-      title: "HackTheNorth 2019",
-      dates: "September 13th - 15th, 2019",
-      location: "Waterloo, Ontario",
-      description: "Built an API rate-limit visualizer that tracks usage across multiple providers and surfaces anomalies in real time.",
-      image: "https://avatar.vercel.sh/hackthenorth-2019?size=40",
-      mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",
-      links: [
-        {
-          title: "Source",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/alexmercer-dev/ratelens",
-        },
-      ],
-    },
-    {
-      title: "DeltaHacks V",
-      dates: "January 18th - 19th, 2019",
-      location: "Hamilton, Ontario",
-      description: "Created a VS Code extension that suggests variable names based on type signatures and surrounding code context using a local ML model.",
-      image: "https://avatar.vercel.sh/deltahacks-v?size=40",
-      links: [],
-    },
-    {
-      title: "StormHacks 2019",
-      dates: "March 2nd - 3rd, 2019",
-      location: "Burnaby, BC",
-      description: "Built a network latency heatmap tool that visualises CDN performance across regions using real user data injected via a lightweight JS snippet.",
-      image: "https://avatar.vercel.sh/stormhacks-2019?size=40",
-      win: "Best Infrastructure Hack",
-      links: [],
+      image: "",
+      video: "",
     },
   ],
 } as const;

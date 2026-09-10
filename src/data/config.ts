@@ -3,9 +3,9 @@ export const CONFIG = {
   // Site Settings
   // ---------------------------------------------------------------------------
   site: {
-    url: "https://alexmercer.dev",
+    url: "https://mohamedmousa.tech",
     locale: "en_US",
-    twitterHandle: "@alexmercer_dev",
+    twitterHandle: "@MohamedMos16571",
   },
 
   // ---------------------------------------------------------------------------
@@ -22,32 +22,14 @@ export const CONFIG = {
   // ---------------------------------------------------------------------------
   typography: {
     // Base font size as a percentage. 100 = browser default (16px).
-    // 110 = 10% larger or 90 = 10% smaller, across all text, headings, and links simultaneously.
-    baseFontSize: 115,
+    baseFontSize: 110,
   },
-
-  // ---------------------------------------------------------------------------
-  // Blog Settings
-  // ---------------------------------------------------------------------------
-  blog: {
-    postsPerPage: 10,
-  },
-
-  // ---------------------------------------------------------------------------
-  // Font Settings
-  // See https://fontsource.org/?variable=true for fonts that can be installed via package registry
-  // To change fonts:
-  // 1. pnpm install @fontsource-variable/<font-name> (for example 'pnpm add @fontsource-variable/inter'). Install BOTH the sans and mono fonts.
-  // 2. Edit src/styles/global.css - swap the @import and --font-sans and --font-mono values
-  // ---------------------------------------------------------------------------
 
   // ---------------------------------------------------------------------------
   // Design Settings
-  // 1. Pick a theme at ui.shadcn.com/themes or generate one with a tool like tweakcn.com
-  // 2. Copy the CSS variables block
-  // 3. Paste into BELOW with the naming conversion already used
+  // Pick a theme at ui.shadcn.com/themes or tweakcn.com, copy the CSS
+  // variables, and paste them below (strip the `--` prefix, camelCase keys).
   // ---------------------------------------------------------------------------
-
   theme: {
     radius: "0.625rem",
 
@@ -93,5 +75,4 @@ export const CONFIG = {
       ring: "oklch(0.556 0 0)",
     },
   },
-
 } as const;

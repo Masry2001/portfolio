@@ -5,8 +5,6 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { DATA } from "@/data/resume";
 import Markdown from "react-markdown";
 import ContactSection from "@/components/section/contact-section";
-import HackathonsSection from "@/components/section/hackathons-section";
-import PhotosSection from "@/components/section/photos-section";
 import ProjectsSection from "@/components/section/projects-section";
 import WorkSection from "@/components/section/work-section";
 import { ArrowUpRight } from "lucide-react";
@@ -102,21 +100,45 @@ const sectionComponents: Record<string, React.ReactNode> = {
       </div>
     </section>
   ),
+  certifications: (
+    <section id="certifications">
+      <div className="flex min-h-0 flex-col gap-y-4">
+        <BlurFade delay={BLUR_FADE_DELAY * 11}>
+          <h2 className="text-xl font-bold">{DATA.sections.certifications.heading}</h2>
+        </BlurFade>
+        <div className="flex flex-col gap-4">
+          {DATA.certifications.map((cert, index) => (
+            <BlurFade key={cert.name} delay={BLUR_FADE_DELAY * 12 + index * 0.05}>
+              <a
+                href={cert.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-x-3 justify-between group"
+              >
+                <div className="flex-1 min-w-0 flex flex-col gap-0.5">
+                  <div className="font-semibold leading-none flex items-center gap-2">
+                    {cert.name}
+                    <ArrowUpRight className="h-3.5 w-3.5 text-muted-foreground opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200" aria-hidden />
+                  </div>
+                  <div className="font-sans text-sm text-muted-foreground">{cert.issuer}</div>
+                </div>
+                <div className="text-xs tabular-nums text-muted-foreground text-right flex-none">
+                  {cert.date}
+                </div>
+              </a>
+            </BlurFade>
+          ))}
+        </div>
+      </div>
+    </section>
+  ),
   projects: (
     <section id="projects">
-      <BlurFade delay={BLUR_FADE_DELAY * 11}>
+      <BlurFade delay={BLUR_FADE_DELAY * 13}>
         <ProjectsSection />
       </BlurFade>
     </section>
   ),
-  hackathons: (
-    <section id="hackathons">
-      <BlurFade delay={BLUR_FADE_DELAY * 13}>
-        <HackathonsSection />
-      </BlurFade>
-    </section>
-  ),
-  photos: <PhotosSection />,
   contact: (
     <section id="contact">
       <BlurFade delay={BLUR_FADE_DELAY * 16}>
@@ -152,7 +174,11 @@ export default function HomePage() {
             </div>
             <BlurFade delay={BLUR_FADE_DELAY} className="order-1 md:order-2">
               <Avatar className="size-24 md:size-32 border rounded-full shadow-lg ring-4 ring-muted">
-                <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
+                <AvatarImage
+                  alt={DATA.name}
+                  src={DATA.avatarUrl}
+                  className="object-cover object-top"
+                />
                 <AvatarFallback>{DATA.initials}</AvatarFallback>
               </Avatar>
             </BlurFade>
