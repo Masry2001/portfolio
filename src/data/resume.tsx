@@ -4,12 +4,11 @@ import { House } from "lucide-react";
 import { Cplusplus } from "@/components/ui/svgs/cplusplus";
 import { Csharp } from "@/components/ui/svgs/csharp";
 import { Php } from "@/components/ui/svgs/php";
-import { Javascript } from "@/components/ui/svgs/javascript";
 import { Typescript } from "@/components/ui/svgs/typescript";
 import { Laravel } from "@/components/ui/svgs/laravel";
-import { Filament } from "@/components/ui/svgs/filament";
-import { Vue } from "@/components/ui/svgs/vue";
+import { ReactLight } from "@/components/ui/svgs/reactLight";
 import { Tailwind } from "@/components/ui/svgs/tailwind";
+import { Sqlserver } from "@/components/ui/svgs/sqlserver";
 import { Mysql } from "@/components/ui/svgs/mysql";
 import { Postgresql } from "@/components/ui/svgs/postgresql";
 import { Docker } from "@/components/ui/svgs/docker";
@@ -63,12 +62,11 @@ export const DATA = {
     { name: "C++", icon: Cplusplus },
     { name: "C#", icon: Csharp },
     { name: "PHP", icon: Php },
-    { name: "JavaScript", icon: Javascript },
     { name: "TypeScript", icon: Typescript },
     { name: "Laravel", icon: Laravel },
-    { name: "Filament", icon: Filament },
-    { name: "Vue", icon: Vue },
+    { name: "React", icon: ReactLight },
     { name: "Tailwind CSS", icon: Tailwind },
+    { name: "SQL Server", icon: Sqlserver },
     { name: "MySQL", icon: Mysql },
     { name: "PostgreSQL", icon: Postgresql },
     { name: "Docker", icon: Docker },
@@ -143,7 +141,7 @@ export const DATA = {
   education: [
     {
       school: "Benha University",
-      href: "https://www.bu.edu.eg/",
+      href: "https://beng.bu.edu.eg/",
       degree: "B.Sc. in Civil Engineering",
       logoUrl: "https://www.google.com/s2/favicons?domain=bu.edu.eg&sz=128",
       start: "2019",
@@ -156,37 +154,37 @@ export const DATA = {
       name: "Laravel",
       issuer: "Udemy",
       date: "2025",
-      href: "/certificates/laravel-12-udemy.pdf",
+      href: "/certificates/view.html?f=laravel-12-udemy.pdf",
     },
     {
       name: "Forward Program",
       issuer: "McKinsey & Company",
       date: "2023",
-      href: "/certificates/mckinsey-forward-program.pdf",
+      href: "/certificates/view.html?f=mckinsey-forward-program.pdf",
     },
     {
       name: "Introduction to RESTful APIs",
       issuer: "Programming Advices",
       date: "2025",
-      href: "/certificates/restful-api.pdf",
+      href: "/certificates/view.html?f=restful-api.pdf",
     },
     {
       name: "OOP Concepts & Applications",
       issuer: "Programming Advices",
       date: "2024",
-      href: "/certificates/oop-concepts.pdf",
+      href: "/certificates/view.html?f=oop-concepts.pdf",
     },
     {
       name: "Data Structures & Algorithms",
       issuer: "Programming Advices",
       date: "2024",
-      href: "/certificates/data-structures.pdf",
+      href: "/certificates/view.html?f=data-structures.pdf",
     },
     {
       name: "Databases — SQL & T-SQL",
       issuer: "Programming Advices",
       date: "2024",
-      href: "/certificates/databases-sql.pdf",
+      href: "/certificates/view.html?f=databases-sql.pdf",
     },
   ],
 

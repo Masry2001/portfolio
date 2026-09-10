@@ -84,6 +84,11 @@ server {
         add_header Cache-Control "public, immutable";
     }
 
+    # certificate PDFs — show in the browser, never force a download
+    location /certificates/ {
+        add_header Content-Disposition "inline" always;
+    }
+
     # security headers (the static build has no server middleware)
     add_header X-Content-Type-Options "nosniff" always;
     add_header X-Frame-Options "DENY" always;

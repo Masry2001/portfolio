@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Certificate</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #1a1a1a; }
+  iframe { border: 0; width: 100%; height: 100%; display: block; }
+  .msg { color: #ddd; font: 15px/1.5 system-ui, sans-serif; padding: 24px; }
+</style>
+</head>
+<body>
+<script>
+  (function () {
+    var f = new URLSearchParams(location.search).get("f") || "";
+    // only allow a plain PDF filename that lives in this folder
+    if (/^[A-Za-z0-9._-]+\.pdf$/.test(f)) {
+      document.title = f.replace(/\.pdf$/i, "").replace(/[-_]+/g, " ");
+      var frame = document.createElement("iframe");
+      frame.src = f + "#view=FitH";
+      frame.title = document.title;
+      document.body.appendChild(frame);
+    } else {
+      var p = document.createElement("p");
+      p.className = "msg";
+      p.textContent = "Certificate not found.";
+      document.body.appendChild(p);
+    }
+  })();
+</script>
+</body>
+</html>
