@@ -6,29 +6,103 @@
 <meta name="robots" content="noindex">
 <title>Certificate</title>
 <style>
-  html, body { margin: 0; height: 100%; background: #1a1a1a; }
-  iframe { border: 0; width: 100%; height: 100%; display: block; }
-  .msg { color: #ddd; font: 15px/1.5 system-ui, sans-serif; padding: 24px; }
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; background: #1b1b1d; }
+  body { font: 14px/1.5 system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color: #e7e7e9; }
+  header {
+    position: sticky; top: 0; z-index: 2;
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    padding: 10px 16px; background: #232326; border-bottom: 1px solid #33343a;
+  }
+  header .name { font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  header a {
+    flex: none; color: #e7e7e9; text-decoration: none;
+    border: 1px solid #44454c; border-radius: 8px; padding: 6px 12px;
+  }
+  header a:hover { background: #2e2f33; }
+  main { padding: 20px 12px 48px; }
+  .doc { max-width: 1000px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 16px; }
+  .doc canvas {
+    width: 100%; height: auto; display: block;
+    border-radius: 6px; box-shadow: 0 6px 30px rgba(0,0,0,.45); background: #fff;
+  }
+  .msg { max-width: 640px; margin: 40px auto; text-align: center; }
+  .msg a { color: #8ab4ff; }
 </style>
 </head>
 <body>
+<header>
+  <span class="name" id="title">Certificate</span>
+  <a id="dl" href="#" download>Download PDF</a>
+</header>
+<main><div class="doc" id="doc"></div></main>
+
 <script>
-  (function () {
-    var f = new URLSearchParams(location.search).get("f") || "";
-    // only allow a plain PDF filename that lives in this folder
-    if (/^[A-Za-z0-9._-]+\.pdf$/.test(f)) {
-      document.title = f.replace(/\.pdf$/i, "").replace(/[-_]+/g, " ");
-      var frame = document.createElement("iframe");
-      frame.src = f + "#view=FitH";
-      frame.title = document.title;
-      document.body.appendChild(frame);
-    } else {
-      var p = document.createElement("p");
-      p.className = "msg";
-      p.textContent = "Certificate not found.";
-      document.body.appendChild(p);
-    }
-  })();
+  var f = new URLSearchParams(location.search).get("f") || "";
+  var valid = /^[A-Za-z0-9._-]+\.pdf$/.test(f);
+  var docEl = document.getElementById("doc");
+  var dlEl = document.getElementById("dl");
+
+  function fail(html) {
+    document.querySelector("main").innerHTML = '<p class="msg">' + html + "</p>";
+  }
+
+  if (!valid) {
+    document.getElementById("title").textContent = "Not found";
+    fail("Certificate not found.");
+  } else {
+    var pretty = f.replace(/\.pdf$/i, "").replace(/[-_]+/g, " ");
+    document.title = pretty;
+    document.getElementById("title").textContent = pretty;
+    dlEl.href = f;
+
+    var s = document.createElement("script");
+    s.src = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js";
+    s.onload = renderPdf;
+    s.onerror = function () {
+      fail('Could not load the viewer. <a href="' + f + '">Open the PDF directly</a>.');
+    };
+    document.head.appendChild(s);
+  }
+
+  function renderPdf() {
+    var pdfjsLib = window["pdfjs-dist/build/pdf"] || window.pdfjsLib;
+    pdfjsLib.GlobalWorkerOptions.workerSrc =
+      "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+
+    pdfjsLib.getDocument({ url: f }).promise.then(function (pdf) {
+      var dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+      function renderPage(num) {
+        return pdf.getPage(num).then(function (page) {
+          var unscaled = page.getViewport({ scale: 1 });
+          var cssWidth = Math.min(docEl.clientWidth || 900, 1000);
+          var scale = (cssWidth / unscaled.width) * dpr;
+          var viewport = page.getViewport({ scale: scale });
+
+          var canvas = document.createElement("canvas");
+          canvas.width = viewport.width;
+          canvas.height = viewport.height;
+          canvas.style.width = cssWidth + "px";
+          docEl.appendChild(canvas);
+
+          return page.render({
+            canvasContext: canvas.getContext("2d"),
+            viewport: viewport,
+          }).promise;
+        });
+      }
+
+      var chain = Promise.resolve();
+      for (var i = 1; i <= pdf.numPages; i++) {
+        (function (n) { chain = chain.then(function () { return renderPage(n); }); })(i);
+      }
+      return chain;
+    }).catch(function () {
+      fail('Could not display this certificate. <a href="' + f + '">Open the PDF directly</a>.');
+    });
+  }
 </script>
 </body>
 </html>
