@@ -235,8 +235,20 @@ export const DATA = {
       dates: "2026",
       active: true,
       description:
-        "A production e-commerce platform with a Laravel REST API back end and a separate TypeScript front end. Covers the product catalog, cart and checkout, orders, and an admin dashboard for managing inventory. Source is private; the live store is public.",
-      technologies: ["Laravel", "PHP", "REST API", "TypeScript", "MySQL"],
+        "A production e-commerce platform built on Laravel with a REST API. The storefront covers the product catalog, cart, checkout, and orders, with WhatsApp (Meta) integration for order updates, OCR for document capture, and AI-assisted features. A Filament admin dashboard manages inventory, employees, customers, users, suppliers, companies, drivers, analytics, reports, and roles and permissions. Source is private; the live store is public.",
+      technologies: [
+        "Laravel",
+        "PHP",
+        "Filament",
+        "REST API",
+        "Livewire",
+        "Alpine.js",
+        "PostgreSQL",
+        "Docker",
+        "WhatsApp (Meta) API",
+        "OCR",
+        "AI integration",
+      ],
       links: [
         {
           type: "Website",
